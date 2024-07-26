@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+// estilo para contenedor principal de todas las paginas
+.content {
+  margin-top: 70px;
+  background-color: #fffefe;
+}
+
+.loginpage {
+  display: flex;
+  background: linear-gradient(90deg, #043494 30%, #649cfc);
+  min-height: 100vh;
+  /* Mínimo alto de la pantalla */
+  width: 100vw;
+  /* Ancho completo de la ventana */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Evitar scroll */
+
+  .welcome-container {
+    background-color: #148cc4;
+    width: 600px;
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: #ffffff;
+    z-index: 0;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+      font-size: 2.5rem;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  .login-container {
+    background-color: #ffffff;
+    width: 450px;
+    height: 580px;
+    margin-top: 40px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      padding: 20px;
+    }
+  }
+}
+
+
+// src/App.scss
+
+// Otros estilos existentes...
+
+.filtro-barra {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  gap: 5px; // Espacio entre cada filtro
+}
+
+.filtro {
+  display: flex;
+  align-items: center;
+  gap: 3px; // Espacio entre etiqueta y control
+}
+
+.filtro label {
+  font-weight: bold;
+  font-size: 12px; // Tamaño de fuente más pequeño para las etiquetas
+}
+
+.filtro input,
+.filtro select {
+  border: 1px solid #14acd4;
+  padding: 4px; // Padding reducido
+  border-radius: 3px;
+  transition: border-color 0.3s ease-in-out;
+  width: auto; // Ajustar según el diseño
+  font-size: 12px; // Tamaño de fuente más pequeño
+}
+
+.filtro input:focus,
+.filtro select:focus {
+  outline: none;
+  border-color: #043490;
+  box-shadow: 0 0 0 2px rgba(20, 172, 212, 0.2); // Sombra más delgada
+}
+
+.btn-primary {
+  background-color: #043490;
+  color: white;
+  border: none;
+  padding: 4px 8px; // Padding reducido
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 12px; // Tamaño de fuente más pequeño
+}
+
+.btn-primary:hover {
+  background-color: #649cfc;
+}
+
+
+// src/styles/_loginform.scss
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+
+  .login-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .form-control {
+    border: 1px solid #14acd4;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 5px;
+    }
+  }
+
+  .btn {
+    color: #ffffff;
+  }
+
+  .btn:hover {
+    background-color: #14acd4;
+    color: #ffffff;
+  }
+
+  .d-grid {
+    width: 100%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+// estilos para el navbar
+.navbar {
+  background-color: #14acd4;
+  padding: 0 20px;
+  height: 70px;
+
+  .navbar-title {
+    color: #ffffff;
+  }
+}
+
+// estilos para el boton modal para agreagar
+.boton-agregar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #14acd4;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: darken(#14acd4, 10%);
+  }
+}
+
+
+// src/App.scss
+.align-right {
+  margin-left: auto;
+}
+
+
+.card-certificacion {
+  // Otros estilos si los tienes
+
+  .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Número de líneas que deseas mostrar */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+.modal-footer .btn-secondary {
+  background-color: #14acd4;
+  color: #ffffff;
+  border: none;
+
+  &:hover {
+    background-color: darken(#14acd4, 10%);
+  }
+}
+
+.modal-footer .btn-info {
+  background-color: #14acd4;
+  color: #ffffff;
+  border: none;
+
+  &:hover {
+    background-color: darken(#14acd4, 10%);
+  }
+}
+
+// animacion de caida solo del login
+.animated-drop {
+  animation: drop 0.5s;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// estilos personalizados
+
+.transUp {
+  transition: 0.5s, color 0.1s;
+  -webkit-transition: 0.5s, color 0.1s;
+  -moz-transition: 0.5s, color 0.1s;
+}
+
+.transUp:hover {
+  transform: translatey(-20px);
+  -webkit-transform: translatey(-20px);
+  -moz-transform: translatey(-20px);
+}
+
+.transDown {
+  transition: 0.5s, color 0.1s;
+  -webkit-transition: 0.5s, color 0.1s;
+  -moz-transition: 0.5s, color 0.1s;
+}
+
+.transDown:hover {
+  transform: translatey(5px);
+  -webkit-transform: translatey(5px);
+  -moz-transform: translatey(5px);
+}
+
+//estilos para el modal
+.custom-modal .modal-dialog {
+  margin-top: 0%;
+  /* Ajusta este valor según sea necesario */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  margin-left: auto; // Empuja el campo de búsqueda a la derecha
+  margin-right: 20px; // Ajusta el margen derecho según sea necesario
+}
+
+.search-input {
+  border: 1px solid #14acd4;
+  padding: 4px; // Padding reducido
+  border-radius: 3px;
+  transition: border-color 0.3s ease-in-out;
+  width: auto; // Ajustar según el diseño
+  font-size: 12px; // Tamaño de fuente más pequeño
+}
