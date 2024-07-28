@@ -3,10 +3,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Components/Login";
 import DashboardLayout from "./Components/DashboardLayout";
-import Dashboard from "./Components/Dashboard";
-import Users from "./Components/Users"; // Importamos el componente Users
+import Dashboard from "./Components/Pages/Dashboard";
+import Users from "./Components/Pages/Users"; // Importamos el componente Users
 import "./App.scss"; // Importamos los estilos globales de la aplicación.
-import Departamento from "./Components/Departamento";
+import Departamento from "./Components/Pages/Departamento";
 import NotFoundPage from "./Pages/NotFoundPage";
 
 function App() {

@@ -1,10 +1,10 @@
 // Importamos las bibliotecas necesarias de React y Reactstrap, así como componentes personalizados.
 import React, { useState } from "react";
 import { Button } from "reactstrap";
-import { CardUser, UserModal } from "./Cards/CardUser";
-import UserFilterForm from "./Forms/UserFilterForm";
-import ModalButton from "./Buttons/ModalButton";
-import AddUserForm from "./Forms/AddUserForm";
+import { CardUser, UserModal } from "../Cards/CardUser";
+import UserFilterForm from "../Forms/UserFilterForm";
+import ModalButton from "../Buttons/ModalButton";
+import AddUserForm from "../Forms/AddUserForm";
 
 // Definimos el componente Users.
 const Users = () => {

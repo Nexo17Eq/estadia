@@ -4,11 +4,11 @@ import { Button } from "reactstrap";
 import {
   CardCertificacion,
   CertificationModal,
-} from "./Cards/CardCertificacion";
-import FilterForm from "./Forms/FilterForm";
-import ModalButton from "./Buttons/ModalButton";
-import AddCertificationForm from "./Forms/AddCertificationForm";
-import SelectCertificationsButton from "./Buttons/SelectCertificationsButton";
+} from "../Cards/CardCertificacion";
+import FilterForm from "../Forms/FilterForm";
+import ModalButton from "../Buttons/ModalButton";
+import AddCertificationForm from "../Forms/AddCertificationForm";
+import SelectCertificationsButton from "../Buttons/SelectCertificationsButton";
 
 // Definimos el componente Dashboard.
 const Dashboard = () => {

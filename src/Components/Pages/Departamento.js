@@ -1,9 +1,9 @@
 // Importamos las bibliotecas necesarias de React y Reactstrap, así como los componentes personalizados.
 import React, { useState } from "react";
 import { Button } from "reactstrap";
-import { CardDepartamento, DepartamentoModal } from "./Cards/CardDepartamento";
-import ModalButton from "./Buttons/ModalButton";
-import AddDepartamento from "./Forms/AddDptoFoorm";
+import { CardDepartamento, DepartamentoModal } from "../Cards/CardDepartamento";
+import ModalButton from "../Buttons/ModalButton";
+import AddDepartamento from "../Forms/AddDptoFoorm";
 
 // Definimos el componente Departamento.
 const Departamento = () => {
