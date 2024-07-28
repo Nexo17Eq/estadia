@@ -9,6 +9,7 @@ import FilterForm from "../Forms/FilterForm";
 import ModalButton from "../Buttons/ModalButton";
 import AddCertificationForm from "../Forms/AddCertificationForm";
 import SelectCertificationsButton from "../Buttons/SelectCertificationsButton";
+import DeleteItemsButton from "../Buttons/DeleteItemsButton"; // Importamos el nuevo componente
 
 // Definimos el componente Dashboard.
 const Dashboard = () => {
@@ -42,56 +43,17 @@ const Dashboard = () => {
       budget: 1000,
     },
     {
-      id: 1,
-      name: "Certificación A",
+      id: 2,
+      name: "Certificación B",
       date: new Date(),
       topic: "Prueba",
       location: "Madrid",
-      space: "Sala A",
+      space: "Sala B",
       department: "Recursos Humanos",
-      startDate: new Date("2023-01-01"),
-      endDate: new Date("2023-01-02"),
-      people: 25,
-      budget: 1000,
-    },
-    {
-      id: 1,
-      name: "Certificación A",
-      date: new Date(),
-      topic: "Prueba",
-      location: "Madrid",
-      space: "Sala A",
-      department: "Recursos Humanos",
-      startDate: new Date("2023-01-01"),
-      endDate: new Date("2023-01-02"),
-      people: 25,
-      budget: 1000,
-    },
-    {
-      id: 1,
-      name: "Certificación A",
-      date: new Date(),
-      topic: "Prueba",
-      location: "Madrid",
-      space: "Sala A",
-      department: "Recursos Humanos",
-      startDate: new Date("2023-01-01"),
-      endDate: new Date("2023-01-02"),
-      people: 25,
-      budget: 1000,
-    },
-    {
-      id: 1,
-      name: "Certificación A",
-      date: new Date(),
-      topic: "Prueba",
-      location: "Madrid",
-      space: "Sala A",
-      department: "Recursos Humanos",
-      startDate: new Date("2023-01-01"),
-      endDate: new Date("2023-01-02"),
-      people: 25,
-      budget: 1000,
+      startDate: new Date("2023-02-01"),
+      endDate: new Date("2023-02-02"),
+      people: 30,
+      budget: 1500,
     },
     // Agregar más certificaciones si es necesario.
   ]);
@@ -171,6 +133,16 @@ const Dashboard = () => {
     ]);
   };
 
+  // Función para eliminar certificaciones seleccionadas.
+  const handleDeleteCertifications = (idsToDelete) => {
+    setCertifications((prevCerts) =>
+      prevCerts.filter((cert) => !idsToDelete.includes(cert.id))
+    );
+    setFilteredCertifications((prevCerts) =>
+      prevCerts.filter((cert) => !idsToDelete.includes(cert.id))
+    );
+  };
+
   return (
     <div className="content">
       {/* Botón modal para añadir una nueva certificación. */}
@@ -178,6 +150,12 @@ const Dashboard = () => {
 
       {/* Botón para seleccionar certificaciones */}
       <SelectCertificationsButton certifications={certifications} />
+
+      {/* Botón para eliminar certificaciones */}
+      <DeleteItemsButton
+        items={certifications}
+        onDelete={handleDeleteCertifications}
+      />
 
       {/* Botón para mostrar u ocultar el menú de filtros. */}
       <Button onClick={toggleFilterMenu} className="toggle-filter-btn">
