@@ -6,6 +6,7 @@ import DashboardLayout from "./Components/DashboardLayout";
 import Dashboard from "./Components/Dashboard";
 import Users from "./Components/Users"; // Importamos el componente Users
 import "./App.scss"; // Importamos los estilos globales de la aplicación.
+import Departamento from "./Components/Departamento";
 import NotFoundPage from "./Pages/NotFoundPage";
 
 function App() {
@@ -26,6 +27,14 @@ function App() {
           element={
             <DashboardLayout>
               <Users />
+            </DashboardLayout>
+          }
+        />
+        <Route
+          path="/departamento"
+          element={
+            <DashboardLayout>
+              <Departamento />
             </DashboardLayout>
           }
         />
