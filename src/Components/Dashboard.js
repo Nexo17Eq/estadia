@@ -1,5 +1,3 @@
-// Dashboard.js
-
 // Importamos las bibliotecas necesarias de React y Reactstrap, así como los componentes personalizados.
 import React, { useState } from "react";
 import { Button } from "reactstrap";
@@ -10,6 +8,7 @@ import {
 import FilterForm from "./Forms/FilterForm";
 import ModalButton from "./Buttons/ModalButton";
 import AddCertificationForm from "./Forms/AddCertificationForm";
+import SelectCertificationsButton from "./Buttons/SelectCertificationsButton";
 
 // Definimos el componente Dashboard.
 const Dashboard = () => {
@@ -31,7 +30,7 @@ const Dashboard = () => {
     // Datos de ejemplo.
     {
       id: 1,
-      name: "1",
+      name: "Certificación A",
       date: new Date(),
       topic: "Prueba",
       location: "Madrid",
@@ -42,6 +41,59 @@ const Dashboard = () => {
       people: 25,
       budget: 1000,
     },
+    {
+      id: 1,
+      name: "Certificación A",
+      date: new Date(),
+      topic: "Prueba",
+      location: "Madrid",
+      space: "Sala A",
+      department: "Recursos Humanos",
+      startDate: new Date("2023-01-01"),
+      endDate: new Date("2023-01-02"),
+      people: 25,
+      budget: 1000,
+    },
+    {
+      id: 1,
+      name: "Certificación A",
+      date: new Date(),
+      topic: "Prueba",
+      location: "Madrid",
+      space: "Sala A",
+      department: "Recursos Humanos",
+      startDate: new Date("2023-01-01"),
+      endDate: new Date("2023-01-02"),
+      people: 25,
+      budget: 1000,
+    },
+    {
+      id: 1,
+      name: "Certificación A",
+      date: new Date(),
+      topic: "Prueba",
+      location: "Madrid",
+      space: "Sala A",
+      department: "Recursos Humanos",
+      startDate: new Date("2023-01-01"),
+      endDate: new Date("2023-01-02"),
+      people: 25,
+      budget: 1000,
+    },
+    {
+      id: 1,
+      name: "Certificación A",
+      date: new Date(),
+      topic: "Prueba",
+      location: "Madrid",
+      space: "Sala A",
+      department: "Recursos Humanos",
+      startDate: new Date("2023-01-01"),
+      endDate: new Date("2023-01-02"),
+      people: 25,
+      budget: 1000,
+    },
+    // Agregar más certificaciones si es necesario.
   ]);
 
   // Estado para las certificaciones filtradas.
@@ -123,6 +175,9 @@ const Dashboard = () => {
     <div className="content">
       {/* Botón modal para añadir una nueva certificación. */}
       <ModalButton icon="fas fa-plus" modalContent={<AddCertificationForm />} />
+
+      {/* Botón para seleccionar certificaciones */}
+      <SelectCertificationsButton certifications={certifications} />
 
       {/* Botón para mostrar u ocultar el menú de filtros. */}
       <Button onClick={toggleFilterMenu} className="toggle-filter-btn">
