@@ -1,3 +1,5 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -10,24 +12,33 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
 
-// estilo para contenedor principal de todas las paginas
+// content styles
 .content {
   margin-top: 70px;
+  padding: 20px;
   background-color: #fffefe;
 }
 
+@media (max-width: 768px) {
+  .content {
+    margin-top: 100px;
+  }
+}
+
+// login styles
 .loginpage {
   display: flex;
   background: linear-gradient(90deg, #043494 30%, #649cfc);
-  min-height: 100vh;
-  /* Mínimo alto de la pantalla */
-  width: 100vw;
-  /* Ancho completo de la ventana */
+  min-height: 100vh; // Mínimo alto de la pantalla
+  width: 100vw; // Ancho completo de la ventana
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  /* Evitar scroll */
+  overflow: hidden; // Evitar scroll
 
   .welcome-container {
     background-color: #148cc4;
@@ -70,64 +81,6 @@ body {
   }
 }
 
-
-// src/App.scss
-
-// Otros estilos existentes...
-
-.filtro-barra {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 20px;
-  gap: 5px; // Espacio entre cada filtro
-}
-
-.filtro {
-  display: flex;
-  align-items: center;
-  gap: 3px; // Espacio entre etiqueta y control
-}
-
-.filtro label {
-  font-weight: bold;
-  font-size: 12px; // Tamaño de fuente más pequeño para las etiquetas
-}
-
-.filtro input,
-.filtro select {
-  border: 1px solid #14acd4;
-  padding: 4px; // Padding reducido
-  border-radius: 3px;
-  transition: border-color 0.3s ease-in-out;
-  width: auto; // Ajustar según el diseño
-  font-size: 12px; // Tamaño de fuente más pequeño
-}
-
-.filtro input:focus,
-.filtro select:focus {
-  outline: none;
-  border-color: #043490;
-  box-shadow: 0 0 0 2px rgba(20, 172, 212, 0.2); // Sombra más delgada
-}
-
-.btn-primary {
-  background-color: #043490;
-  color: white;
-  border: none;
-  padding: 4px 8px; // Padding reducido
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  font-size: 12px; // Tamaño de fuente más pequeño
-}
-
-.btn-primary:hover {
-  background-color: #649cfc;
-}
-
-
-// src/styles/_loginform.scss
 .login-form {
   display: flex;
   flex-direction: column;
@@ -174,145 +127,313 @@ body {
   }
 }
 
-// estilos para el navbar
+// Navbar styles
 .navbar {
   background-color: #14acd4;
-  padding: 0 20px;
-  height: 70px;
+  padding: 10px 20px;
+  color: #fff;
+
+  .navbar-brand {
+    .logo {
+      height: 50px;
+      width: auto;
+    }
+  }
 
   .navbar-title {
-    color: #ffffff;
+    flex: 1;
+    text-align: center;
+
+    h1 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin: 0;
+    }
+  }
+
+  .nav-item {
+    .btn {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+
+      svg {
+        margin-right: 5px;
+      }
+
+      &:hover {
+        color: #d33;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar-title h1 {
+      font-size: 1.2rem;
+    }
+
+    .nav-item .btn {
+      font-size: 0.9rem;
+    }
   }
 }
 
-// estilos para el boton modal para agreagar
-.boton-agregar {
+// Card styles
+.cert-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .cert-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .card-body {
+    text-align: center;
+    padding: 10px;
+
+    .card-title {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .card-subtitle {
+      font-size: 1rem;
+      color: #777;
+    }
+  }
+}
+
+.modal-content {
+  .modal-header {
+    background-color: #14acd4;
+    color: white;
+  }
+
+  .modal-body {
+    color: #333;
+  }
+
+  .modal-footer {
+    button {
+      background-color: #14acd4;
+      border: none;
+      color: white;
+
+      &:hover {
+        background-color: #0d8bc4;
+      }
+    }
+  }
+}
+
+.modal-content {
+  .modal-header {
+    background-color: #14acd4;
+    color: white;
+  }
+
+  .modal-body {
+    color: #333;
+  }
+
+  .modal-footer {
+    button {
+      background-color: #14acd4;
+      border: none;
+      color: white;
+
+      &:hover {
+        background-color: #0d8bc4;
+      }
+    }
+  }
+}
+
+.modal-content {
+  .modal-header {
+    background-color: #14acd4;
+    color: white;
+  }
+
+  .modal-body {
+    color: #333;
+  }
+
+  .modal-footer {
+    button {
+      background-color: #14acd4;
+      border: none;
+      color: white;
+
+      &:hover {
+        background-color: #0d8bc4;
+      }
+    }
+  }
+}
+
+// Dashboard styles
+/* Dashboard styles */
+.toggle-filter-btn {
+  margin-bottom: 20px;
+  background-color: #14acd4;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.filter-menu {
+  display: none;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-menu.visible {
+  display: block;
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .form-group {
+    flex: 1 1 200px;
+
+    label {
+      color: #333;
+    }
+
+    input,
+    .react-datepicker-wrapper {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .react-datepicker__input-container input {
+      width: 100%;
+    }
+  }
+
+  button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #14acd4;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.certifications {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+// Special Buttons styles
+
+/* ModalButton.css */
+.modal-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: #14acd4;
-  color: #ffffff;
   border: none;
   border-radius: 50%;
+  color: red;
   width: 50px;
   height: 50px;
-  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  outline: none; 
+  z-index: 100;
+}
+
+.modal-button i {
+  font-size: 24px;
+  color: white;
+}
+
+.modal-button:hover {
+  background-color: #0e8ca3;
+  transform: scale(1.1);
+}
+
+// Not found styles
+.notfoundpage {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &:hover {
-    background-color: darken(#14acd4, 10%);
-  }
+  height: 100%;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #fff;
+  text-align: center;
 }
 
-
-// src/App.scss
-.align-right {
-  margin-left: auto;
+.notfound-container {
+  animation: drop 1s ease-in-out;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
-
-.card-certificacion {
-  // Otros estilos si los tienes
-
-  .card-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    /* Número de líneas que deseas mostrar */
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.notfound-container h1 {
+  font-size: 6rem;
+  margin-bottom: 10px;
 }
 
-
-.modal-footer .btn-secondary {
-  background-color: #14acd4;
-  color: #ffffff;
-  border: none;
-
-  &:hover {
-    background-color: darken(#14acd4, 10%);
-  }
-}
-
-.modal-footer .btn-info {
-  background-color: #14acd4;
-  color: #ffffff;
-  border: none;
-
-  &:hover {
-    background-color: darken(#14acd4, 10%);
-  }
-}
-
-// animacion de caida solo del login
-.animated-drop {
-  animation: drop 0.5s;
-}
-
-@keyframes drop {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-// estilos personalizados
-
-.transUp {
-  transition: 0.5s, color 0.1s;
-  -webkit-transition: 0.5s, color 0.1s;
-  -moz-transition: 0.5s, color 0.1s;
-}
-
-.transUp:hover {
-  transform: translatey(-20px);
-  -webkit-transform: translatey(-20px);
-  -moz-transform: translatey(-20px);
-}
-
-.transDown {
-  transition: 0.5s, color 0.1s;
-  -webkit-transition: 0.5s, color 0.1s;
-  -moz-transition: 0.5s, color 0.1s;
-}
-
-.transDown:hover {
-  transform: translatey(5px);
-  -webkit-transform: translatey(5px);
-  -moz-transform: translatey(5px);
-}
-
-//estilos para el modal
-.custom-modal .modal-dialog {
-  margin-top: 0%;
-  /* Ajusta este valor según sea necesario */
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
+.notfound-container p {
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
-.search-container {
-  margin-left: auto; // Empuja el campo de búsqueda a la derecha
-  margin-right: 20px; // Ajusta el margen derecho según sea necesario
+.notfound-container a {
+  text-decoration: none;
 }
 
-.search-input {
-  border: 1px solid #14acd4;
-  padding: 4px; // Padding reducido
-  border-radius: 3px;
-  transition: border-color 0.3s ease-in-out;
-  width: auto; // Ajustar según el diseño
-  font-size: 12px; // Tamaño de fuente más pequeño
+.notfound-container button {
+  padding: 10px 20px;
+  background-color: #14acd4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.notfound-container button:hover {
+  background-color: #0d8bc4;
+}
+
+/* Animación de caída */
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

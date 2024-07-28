@@ -1,10 +1,15 @@
+// Navbar.js
+
+// Importamos las bibliotecas necesarias de React, SweetAlert2 y React Icons.
 import React from "react";
 import Swal from "sweetalert2";
 import { FaSignOutAlt } from "react-icons/fa";
 
+// Definimos el componente Navbar.
 const Navbar = () => {
-  // funcion demostrativa para cerrar sesion
+  // Función demostrativa para cerrar sesión.
   const cerrarSesion = () => {
+    // Mostramos una alerta de confirmación usando SweetAlert2.
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Estás a punto de cerrar sesión",
@@ -14,18 +19,19 @@ const Navbar = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Sí, cerrar sesión",
     }).then((result) => {
+      // Si el usuario confirma, mostramos una alerta de éxito y redirigimos a la página principal.
       if (result.isConfirmed) {
         Swal.fire("Sesión cerrada", "", "success");
-
         window.location.href = "/";
       }
     });
   };
 
   return (
+    // Definimos la barra de navegación con la clase "navbar fixed-top".
     <nav className="navbar fixed-top">
       <div className="container-fluid">
-        {/* div para el logo */}
+        {/* Sección de la marca de la barra de navegación con el logo. */}
         <div className="navbar-brand">
           <img
             src="https://turismo.durango.gob.mx/wp-content/uploads/sites/35/2022/11/SETUED.svg"
@@ -34,17 +40,21 @@ const Navbar = () => {
           />
         </div>
 
+        {/* Título de la barra de navegación. */}
         <div className="navbar-title">
           <h1>Registro Estatal De Calidad Turistica</h1>
         </div>
-        <ul className=" nav jsutify-content-end">
+
+        {/* Sección de navegación a la derecha con un botón para cerrar sesión. */}
+        <ul className="nav justify-content-end">
           <li className="nav-item">
             <button
               className="btn btn-secondary"
               onClick={() => cerrarSesion()}
             >
+              {/* Icono de cerrar sesión de React Icons y texto "Salir". */}
               <FaSignOutAlt />
-              Cerrar sesión
+              Salir
             </button>
           </li>
         </ul>
@@ -53,4 +63,5 @@ const Navbar = () => {
   );
 };
 
+// Exportamos el componente Navbar como predeterminado.
 export default Navbar;

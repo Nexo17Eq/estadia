@@ -1,8 +1,7 @@
-Dependencias a instalar:
+Para ejecutar, Primero instala las dependencias con:
+    npm install
 
-npm install react-router-dom
-npm install bootstrap sass
-npm install react-icons
-npm install sweetalert2
-npm i react-bootstrap
-npm install react-datepicker --save
+Luego, para iniciar, ejecuta:
+    npm start
+
+Navegar, agregaras en la url "/dashboard"
