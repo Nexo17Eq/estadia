@@ -11,6 +11,8 @@ import {
   ModalFooter,
   Button,
 } from "reactstrap";
+import BotonEditarModal from "../Buttons/ModalEditarButton";
+import AddUserForm from "../Forms/AddUserForm";
 
 // Definimos una imagen por defecto para los usuarios.
 const defaultImage =
@@ -52,6 +54,7 @@ const UserModal = ({ user, toggleModal }) => {
           <strong>Departamento:</strong> {user.department}
         </p>
       </ModalBody>
+      <BotonEditarModal modalContent={<AddUserForm />} />
       <ModalFooter>
         <Button color="secondary" onClick={() => toggleModal(null)}>
           Cerrar

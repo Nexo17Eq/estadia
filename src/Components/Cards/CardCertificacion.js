@@ -11,6 +11,8 @@ import {
   ModalFooter,
   Button,
 } from "reactstrap";
+import BotonEditarModal from "../Buttons/ModalEditarButton";
+import AddCertificationForm from "../Forms/AddCertificationForm";
 
 // Definimos una imagen por defecto para las certificaciones.
 const defaultImage =
@@ -65,6 +67,7 @@ const CertificationModal = ({ certification, toggleModal }) => {
         <p>
           <strong>Presupuesto:</strong> ${certification.budget}
         </p>
+        <BotonEditarModal modalContent={<AddCertificationForm />} />
       </ModalBody>
       <ModalFooter>
         <Button color="secondary" onClick={() => toggleModal(null)}>

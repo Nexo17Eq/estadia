@@ -10,6 +10,8 @@ import {
   ModalFooter,
   Button,
 } from "reactstrap";
+import BotonEditarModal from "../Buttons/ModalEditarButton";
+import AddDepartamento from "../Forms/AddDptoFoorm";
 
 // Definimos una imagen por defecto para los departamentos.
 const defaultImage =
@@ -41,6 +43,7 @@ const DepartamentoModal = ({ departamento, toggleModal }) => {
           <strong>Descripción:</strong> {departamento.description}
         </p>
       </ModalBody>
+      <BotonEditarModal modalContent={<AddDepartamento />} />
       <ModalFooter>
         <Button color="secondary" onClick={() => toggleModal(null)}>
           Cerrar
