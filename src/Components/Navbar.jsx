@@ -1,9 +1,8 @@
-// Navbar.js
-
 // Importamos las bibliotecas necesarias de React, SweetAlert2 y React Icons.
 import React from "react";
 import Swal from "sweetalert2";
-import { FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt, FaUser, FaBuilding, FaHome } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // Definimos el componente Navbar.
 const Navbar = () => {
@@ -45,8 +44,26 @@ const Navbar = () => {
           <h1>Registro Estatal De Calidad Turistica</h1>
         </div>
 
-        {/* Sección de navegación a la derecha con un botón para cerrar sesión. */}
+        {/* Sección de navegación a la derecha con opciones de navegación y botón para cerrar sesión. */}
         <ul className="nav justify-content-end">
+          <li className="nav-item">
+            <Link to="/dashboard" className="nav-link">
+              <FaHome />
+              Dashboard
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/users" className="nav-link">
+              <FaUser />
+              Usuarios
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/departamento" className="nav-link">
+              <FaBuilding />
+              Departamentos
+            </Link>
+          </li>
           <li className="nav-item">
             <button
               className="btn btn-secondary"

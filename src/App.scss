@@ -128,10 +128,13 @@ body {
 }
 
 // Navbar styles
+// Navbar styles
 .navbar {
   background-color: #14acd4;
   padding: 10px 20px;
   color: #fff;
+  display: flex;
+  align-items: center;
 
   .navbar-brand {
     .logo {
@@ -151,22 +154,45 @@ body {
     }
   }
 
-  .nav-item {
-    .btn {
-      display: flex;
-      align-items: center;
-      background-color: transparent;
-      border: none;
-      color: #fff;
-      font-size: 1rem;
-      cursor: pointer;
+  .nav {
+    display: flex;
+    align-items: center;
 
-      svg {
-        margin-right: 5px;
+    .nav-item {
+      margin-left: 15px;
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+
+        svg {
+          margin-right: 5px;
+        }
+
+        &:hover {
+          color: #d33;
+        }
       }
 
-      &:hover {
-        color: #d33;
+      .btn {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+
+        svg {
+          margin-right: 5px;
+        }
+
+        &:hover {
+          color: #d33;
+        }
       }
     }
   }
@@ -176,6 +202,7 @@ body {
       font-size: 1.2rem;
     }
 
+    .nav-item .nav-link,
     .nav-item .btn {
       font-size: 0.9rem;
     }
