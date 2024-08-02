@@ -24,6 +24,7 @@ const FilterForm = ({
           id="name"
           value={filters.name}
           onChange={handleFilterChange}
+          autoComplete="off" // Desactivar autocompletado
         />
       </FormGroup>
       <FormGroup>
@@ -34,6 +35,7 @@ const FilterForm = ({
           id="topic"
           value={filters.topic}
           onChange={handleFilterChange}
+          autoComplete="off" // Desactivar autocompletado
         />
       </FormGroup>
       <FormGroup>
@@ -44,6 +46,7 @@ const FilterForm = ({
           id="location"
           value={filters.location}
           onChange={handleFilterChange}
+          autoComplete="off" // Desactivar autocompletado
         />
       </FormGroup>
       <FormGroup>
@@ -54,6 +57,7 @@ const FilterForm = ({
           id="space"
           value={filters.space}
           onChange={handleFilterChange}
+          autoComplete="off" // Desactivar autocompletado
         />
       </FormGroup>
       <FormGroup>
@@ -64,6 +68,7 @@ const FilterForm = ({
           id="department"
           value={filters.department}
           onChange={handleFilterChange}
+          autoComplete="off" // Desactivar autocompletado
         />
       </FormGroup>
       <FormGroup>
@@ -88,6 +93,7 @@ const FilterForm = ({
           id="people"
           value={filters.people}
           onChange={handleFilterChange}
+          autoComplete="off" // Desactivar autocompletado
         />
       </FormGroup>
       <FormGroup>
@@ -98,6 +104,7 @@ const FilterForm = ({
           id="budget"
           value={filters.budget}
           onChange={handleFilterChange}
+          autoComplete="off" // Desactivar autocompletado
         />
       </FormGroup>
       <Button onClick={handleFilter}>Filtrar</Button>

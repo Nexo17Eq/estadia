@@ -6,7 +6,7 @@ import Dashboard from "./Components/Pages/Dashboard";
 import Users from "./Components/Pages/Users"; // Importamos el componente Users
 import "./App.scss"; // Importamos los estilos globales de la aplicación.
 import Departamento from "./Components/Pages/Departamento";
-import NotFoundPage from "./Pages/NotFoundPage";
+import NotFoundPage from "./Components/Pages/NotFoundPage";
 
 /**
  * Componente principal de la aplicación que configura las rutas y el enrutamiento.
