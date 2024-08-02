@@ -17,8 +17,8 @@ const AddCertificationForm = () => {
     department: "",
     startDate: new Date(),
     endDate: new Date(),
-    people: "",
-    budget: "",
+    // people: "",
+    // budget: "",
   };
 
   // Estado para la certificación.
@@ -130,7 +130,7 @@ const AddCertificationForm = () => {
           required
         />
       </FormGroup>
-      <FormGroup>
+      {/* <FormGroup>
         <Label for="people">Número de Personas</Label>
         <Input
           type="number"
@@ -140,8 +140,8 @@ const AddCertificationForm = () => {
           onChange={handleChange}
           required
         />
-      </FormGroup>
-      <FormGroup>
+      </FormGroup> */}
+      {/* <FormGroup>
         <Label for="budget">Presupuesto</Label>
         <Input
           type="number"
@@ -151,7 +151,7 @@ const AddCertificationForm = () => {
           onChange={handleChange}
           required
         />
-      </FormGroup>
+      </FormGroup> */}
       <div className="form-buttons">
         <Button type="submit" color="primary">
           Agregar Certificación
