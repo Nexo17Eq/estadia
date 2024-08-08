@@ -17,7 +17,7 @@ const FilterForm = ({
     // Formulario de filtrado.
     <Form className="filter-form">
       <FormGroup>
-        <Label for="name">Nombre</Label>
+        <Label for="name">Nombre Certificación</Label>
         <Input
           type="text"
           name="name"
@@ -39,15 +39,89 @@ const FilterForm = ({
         />
       </FormGroup>
       <FormGroup>
-        <Label for="location">Municipio o Lugar</Label>
+        <Label for="municipio">Municipio</Label>
+        <Input
+          type="select"
+          name="municipio"
+          id="municipio"
+          value={filters.municipio}
+          onChange={handleFilterChange}
+          autoComplete="off" // Desactivar autocompletado
+        >
+          <option value="">Selecciona un municipio</option>
+          <option value="Canatlán">Canatlán</option>
+          <option value="Canelas">Canelas</option>
+          <option value="Coneto de Comonfort">Coneto de Comonfort</option>
+          <option value="Cuencamé">Cuencamé</option>
+          <option value="Durango">Durango</option>
+          <option value="El Oro">El Oro</option>
+          <option value="Gómez Palacio">Gómez Palacio</option>
+          <option value="Guadalupe Victoria">Guadalupe Victoria</option>
+          <option value="Guanaceví">Guanaceví</option>
+          <option value="Hidalgo">Hidalgo</option>
+          <option value="Indé">Indé</option>
+          <option value="Lerdo">Lerdo</option>
+          <option value="Mapimí">Mapimí</option>
+          <option value="Mezquital">Mezquital</option>
+          <option value="Nazas">Nazas</option>
+          <option value="Nombre de Dios">Nombre de Dios</option>
+          <option value="Ocampo">Ocampo</option>
+          <option value="El Salto (Pueblo Nuevo)">
+            El Salto (Pueblo Nuevo)
+          </option>
+          <option value="Pánuco de Coronado">Pánuco de Coronado</option>
+          <option value="Peñón Blanco">Peñón Blanco</option>
+          <option value="Poanas">Poanas</option>
+          <option value="Rodeo">Rodeo</option>
+          <option value="San Bernardo">San Bernardo</option>
+          <option value="San Dimas">San Dimas</option>
+          <option value="San Juan de Guadalupe">San Juan de Guadalupe</option>
+          <option value="San Juan del Río">San Juan del Río</option>
+          <option value="San Luis del Cordero">San Luis del Cordero</option>
+          <option value="San Pedro del Gallo">San Pedro del Gallo</option>
+          <option value="Santa Clara">Santa Clara</option>
+          <option value="Santiago Papasquiaro">Santiago Papasquiaro</option>
+          <option value="Súchil">Súchil</option>
+          <option value="Tamazula">Tamazula</option>
+          <option value="Tepehuanes">Tepehuanes</option>
+          <option value="Tlahualilo">Tlahualilo</option>
+          <option value="Topia">Topia</option>
+          <option value="Vicente Guerrero">Vicente Guerrero</option>
+        </Input>
+      </FormGroup>
+      <FormGroup>
+        <Label for="localidad">Localidad</Label>
         <Input
           type="text"
-          name="location"
-          id="location"
-          value={filters.location}
+          name="localidad"
+          id="localidad"
+          value={filters.localidad}
           onChange={handleFilterChange}
           autoComplete="off" // Desactivar autocompletado
         />
+      </FormGroup>
+      <FormGroup>
+        <Label for="categoria">Categoría</Label>
+        <Input
+          type="select"
+          name="categoria"
+          id="categoria"
+          value={filters.categoria}
+          onChange={handleFilterChange}
+          autoComplete="off" // Desactivar autocompletado
+        >
+          <option value="">Selecciona una categoría</option>
+          <option value="restaurantes">Restaurantes</option>
+          <option value="hoteles">Hoteles</option>
+          <option value="escuelas">Escuelas</option>
+          <option value="hospitales">Hospitales</option>
+          <option value="oficinas">Oficinas</option>
+          <option value="tiendas">Tiendas</option>
+          <option value="parques">Parques</option>
+          <option value="cines">Cines</option>
+          <option value="gimnasios">Gimnasios</option>
+          <option value="otros">Otros</option>
+        </Input>
       </FormGroup>
       <FormGroup>
         <Label for="space">Espacio</Label>
@@ -63,13 +137,16 @@ const FilterForm = ({
       <FormGroup>
         <Label for="department">Departamento encargado</Label>
         <Input
-          type="text"
+          type="select"
           name="department"
           id="department"
           value={filters.department}
           onChange={handleFilterChange}
           autoComplete="off" // Desactivar autocompletado
-        />
+        >
+          <option value="">Selecciona un departamento</option>
+          {/* Agregar aquí todas las opciones de departamentos disponibles */}
+        </Input>
       </FormGroup>
       <FormGroup>
         <Label for="startDate">Fecha de Inicio</Label>

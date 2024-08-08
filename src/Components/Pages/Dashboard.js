@@ -17,7 +17,8 @@ const Dashboard = () => {
   const [filters, setFilters] = useState({
     name: "",
     topic: "",
-    location: "",
+    municipio: "", // Cambiado de location a municipio
+    localidad: "", // Cambiado de location a localidad
     space: "",
     department: "",
     startDate: null,
@@ -34,7 +35,8 @@ const Dashboard = () => {
       name: "Certificación A",
       date: new Date(),
       topic: "Prueba",
-      location: "Madrid",
+      municipio: "Durango",
+      localidad: "Centro",
       space: "Sala A",
       department: "Recursos Humanos",
       startDate: new Date("2023-01-01"),
@@ -47,7 +49,8 @@ const Dashboard = () => {
       name: "Certificación B",
       date: new Date(),
       topic: "Prueba",
-      location: "Madrid",
+      municipio: "Gómez Palacio",
+      localidad: "Norte",
       space: "Sala B",
       department: "Recursos Humanos",
       startDate: new Date("2023-02-01"),
@@ -87,10 +90,14 @@ const Dashboard = () => {
           cert.name.toLowerCase().includes(filters.name.toLowerCase())) &&
         (filters.topic === "" ||
           cert.topic.toLowerCase().includes(filters.topic.toLowerCase())) &&
-        (filters.location === "" ||
-          cert.location
+        (filters.municipio === "" ||
+          cert.municipio
             .toLowerCase()
-            .includes(filters.location.toLowerCase())) &&
+            .includes(filters.municipio.toLowerCase())) &&
+        (filters.localidad === "" ||
+          cert.localidad
+            .toLowerCase()
+            .includes(filters.localidad.toLowerCase())) &&
         (filters.space === "" ||
           cert.space.toLowerCase().includes(filters.space.toLowerCase())) &&
         (filters.department === "" ||

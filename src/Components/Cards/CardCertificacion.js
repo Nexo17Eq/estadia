@@ -47,7 +47,10 @@ const CertificationModal = ({ certification, toggleModal }) => {
           <strong>Tema:</strong> {certification.topic}
         </p>
         <p>
-          <strong>Municipio o Lugar:</strong> {certification.location}
+          <strong>Municipio:</strong> {certification.municipio}
+        </p>
+        <p>
+          <strong>Localidad:</strong> {certification.localidad}
         </p>
         <p>
           <strong>Espacio:</strong> {certification.space}
@@ -59,10 +62,6 @@ const CertificationModal = ({ certification, toggleModal }) => {
           <strong>Fecha de Inicio - Fin:</strong>{" "}
           {certification.startDate.toLocaleDateString()} -{" "}
           {certification.endDate.toLocaleDateString()}
-        </p>
-        <p>
-          <strong>Número de personas que asistieron:</strong>{" "}
-          {certification.people}
         </p>
         <p>
           <strong>Presupuesto:</strong> ${certification.budget}
