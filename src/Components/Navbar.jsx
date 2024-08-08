@@ -30,13 +30,14 @@ const Navbar = () => {
     // Definimos la barra de navegación con la clase "navbar fixed-top".
     <nav className="navbar fixed-top">
       <div className="container-fluid">
-        {/* Sección de la marca de la barra de navegación con el logo. */}
         <div className="navbar-brand">
-          <img
-            src="https://turismo.durango.gob.mx/wp-content/uploads/sites/35/2022/11/SETUED.svg"
-            alt="logo"
-            className="logo"
-          />
+          <Link to="/dashboard">
+            <img
+              src="https://turismo.durango.gob.mx/wp-content/uploads/sites/35/2022/11/SETUED.svg"
+              alt="logo"
+              className="logo"
+            />
+          </Link>
         </div>
 
         {/* Título de la barra de navegación. */}
